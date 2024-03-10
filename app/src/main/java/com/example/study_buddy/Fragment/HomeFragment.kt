@@ -47,8 +47,8 @@ class HomeFragment : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
-        val subjectCode = listOf("23BCI0137", "23BBS0189")
-        val time = listOf("9:00 to 5:00", "5:00 to 9:00")
+        val subjectCode = listOf("34567", "23BBS0189","behcfrfr")
+        val time = listOf("9:00 to 5:00","9:00 to 5:00", "5:00 to 9:00")
         val adapter = PopularAdapter(subjectCode, time)
         binding.PopulafrecyclerView.layoutManager=LinearLayoutManager(requireContext())
         binding.PopulafrecyclerView.adapter = adapter

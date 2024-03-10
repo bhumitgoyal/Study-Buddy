@@ -20,7 +20,7 @@ class PopularAdapter (private val items:List<String>,private val time:List<Strin
         holder.bind(item,time)
     }
     override fun getItemCount(): Int {
-        TODO("Not yet implemented")
+        return  items.size
     }
 
     class PopularViewHolder (private val binding : PopulafItemsBinding) : RecyclerView.ViewHolder(binding.root) {
