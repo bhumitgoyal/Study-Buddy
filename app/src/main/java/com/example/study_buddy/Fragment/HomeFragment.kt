@@ -6,30 +6,29 @@ import android.view.LayoutInflater
 import android.view.View
 
 import android.view.ViewGroup
+import androidx.appcompat.widget.SearchView
 import androidx.recyclerview.widget.LinearLayoutManager
+import com.example.study_buddy.adapter.MenuAdapter
 
 import com.example.study_buddy.adapter.PopularAdapter
 import com.example.study_buddy.databinding.FragmentHomeBinding
 
-// TODO: Rename parameter arguments, choose names that match
-// the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
-private const val ARG_PARAM1 = "param1"
-private const val ARG_PARAM2 = "param2"
 
-/**
- * A simple [Fragment] subclass.
- * Use the [HomeFragment.newInstance] factory method to
- * create an instance of this fragment.
- */
+
 class HomeFragment : Fragment() {
 
     private lateinit var binding: FragmentHomeBinding
+    private val subjectCode = listOf("34567", "23BBS0189","behcfrfr")
+    private val time = listOf("9:00 to 5:00","9:00 to 5:00", "5:00 to 9:00")
+    private lateinit var adapter: MenuAdapter
     override fun onCreate(savedInstanceState: Bundle?) {
 
         super.onCreate(savedInstanceState)
 
     }
 
+    private val filterMenuCode = mutableListOf<String>()
+    private val filterMenuTime = mutableListOf<String>()
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
@@ -40,40 +39,66 @@ class HomeFragment : Fragment() {
     ): View? {
         // Inflate the layout for this fragment
         binding = FragmentHomeBinding.inflate(inflater,container,false)
+
+        adapter= MenuAdapter(filterMenuCode,filterMenuTime)
+        binding.PopulafrecyclerView.layoutManager=LinearLayoutManager(requireContext())
+        binding.PopulafrecyclerView.adapter=adapter
+
+        setupSearchView()
+        showAllMenu()
+
         return binding.root
 
+    }
+
+    private fun showAllMenu() {
+        filterMenuCode.clear()
+        filterMenuTime.clear()
+
+        filterMenuCode.addAll(subjectCode)
+        filterMenuTime.addAll(time)
+
+        adapter.notifyDataSetChanged()
     }
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
-        val subjectCode = listOf("34567", "23BBS0189","behcfrfr")
-        val time = listOf("9:00 to 5:00","9:00 to 5:00", "5:00 to 9:00")
-        val adapter = PopularAdapter(subjectCode, time)
-        binding.PopulafrecyclerView.layoutManager=LinearLayoutManager(requireContext())
-        binding.PopulafrecyclerView.adapter = adapter
+
+    }
+    private fun setupSearchView(){
+        binding.searchView.setOnQueryTextListener(object : SearchView.OnQueryTextListener,
+            android.widget.SearchView.OnQueryTextListener {
+            override fun onQueryTextSubmit(query: String): Boolean {
+                filterMenuItems(query)
+                return true
+            }
+
+            override fun onQueryTextChange(newText: String): Boolean {
+                filterMenuItems(newText)
+                return true
+            }
+
+
+        })
+    }
+
+    private fun filterMenuItems(query: String) {
+
+        filterMenuCode.clear()
+        filterMenuTime.clear()
+
+        subjectCode.forEachIndexed { index, SubjectCode ->
+            if(SubjectCode.contains(query, ignoreCase = true)){
+                filterMenuCode.add(SubjectCode)
+                filterMenuTime.add(time[index])
+            }
+        }
+        adapter.notifyDataSetChanged()
     }
 
 
 
-
     companion object {
-        /**
-         * Use this factory method to create a new instance of
-         * this fragment using the provided parameters.
-         *
-         * @param param1 Parameter 1.
-         * @param param2 Parameter 2.
-         * @return A new instance of fragment HomeFragment.
-         */
-        // TODO: Rename and change types and number of parameters
-        @JvmStatic
-        fun newInstance(param1: String, param2: String) =
-            HomeFragment().apply {
-                arguments = Bundle().apply {
-                    putString(ARG_PARAM1, param1)
-                    putString(ARG_PARAM2, param2)
-                }
-            }
     }
 }
