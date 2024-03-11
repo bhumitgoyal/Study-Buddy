@@ -4,8 +4,8 @@
     <item android:title="Home"
         android:id="@+id/homeFragment"
         android:icon="@drawable/house"/>
-    <item android:title="Add"
-        android:id="@+id/ADDFragment"
+    <item android:title="Profile"
+        android:id="@+id/profileFragment"
         android:icon="@drawable/add"/>
     <item android:title="Info"
         android:id="@+id/infoFragment"

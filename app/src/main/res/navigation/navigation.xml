@@ -10,11 +10,7 @@
         android:name="com.example.study_buddy.Fragment.HomeFragment"
         android:label="fragment_home"
         tools:layout="@layout/fragment_home" />
-    <fragment
-        android:id="@+id/ADDFragment"
-        android:name="com.example.study_buddy.Fragment.ADDFragment"
-        android:label="fragment_a_d_d"
-        tools:layout="@layout/fragment_a_d_d" />
+
     <fragment
         android:id="@+id/profileFragment"
         android:name="com.example.study_buddy.Fragment.ProfileFragment"
