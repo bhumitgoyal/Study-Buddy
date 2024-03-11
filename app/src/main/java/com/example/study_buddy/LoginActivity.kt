@@ -20,7 +20,7 @@ class LoginActivity : AppCompatActivity() {
             val intent = Intent(this,SigninActivity::class.java)
             startActivity(intent)
         }
-        binding.loginbutton.setOnClickListener {
+        binding.donthavebutton.setOnClickListener {
             val intent = Intent(this,SigninActivity::class.java)
             startActivity(intent)
         }
