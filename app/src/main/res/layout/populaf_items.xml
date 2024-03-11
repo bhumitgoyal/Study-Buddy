@@ -54,7 +54,7 @@
                 tools:layout_editor_absoluteY="52dp" />
 
             <ImageButton
-                android:id="@+id/OkButton"
+                android:id="@+id/infoOkButton"
                 android:layout_width="29dp"
                 android:layout_height="27dp"
                 android:layout_marginEnd="36dp"

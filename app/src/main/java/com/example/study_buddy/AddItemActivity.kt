@@ -14,6 +14,10 @@ class AddItemActivity : AppCompatActivity() {
     }
     override fun onCreate(savedInstanceState: Bundle?) {
 
+        binding.backButton.setOnClickListener {
+            finish()
+        }
+
         super.onCreate(savedInstanceState)
         setContentView(binding.root)
 

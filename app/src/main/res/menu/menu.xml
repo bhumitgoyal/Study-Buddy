@@ -4,11 +4,12 @@
     <item android:title="Home"
         android:id="@+id/homeFragment"
         android:icon="@drawable/house"/>
-    <item android:title="Profile"
-        android:id="@+id/profileFragment"
-        android:icon="@drawable/add"/>
     <item android:title="Info"
         android:id="@+id/infoFragment"
         android:icon="@drawable/list"/>
+    <item android:title="Profile"
+        android:id="@+id/profileFragment"
+        android:icon="@drawable/user_02"/>
+
 
 </menu>

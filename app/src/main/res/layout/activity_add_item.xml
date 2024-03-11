@@ -21,7 +21,7 @@
         android:layout_height="match_parent">
 
         <ImageButton
-            android:id="@+id/imageButton"
+            android:id="@+id/backButton"
             android:layout_width="24dp"
             android:layout_height="24dp"
             android:layout_marginStart="8dp"
@@ -41,7 +41,7 @@
             android:textSize="40sp"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="@+id/imageButton" />
+            app:layout_constraintTop_toTopOf="@+id/backButton" />
 
         <EditText
             android:id="@+id/enterCode"
@@ -120,10 +120,21 @@
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/enterName" />
 
-
-
-
-
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/addRequestButton"
+            android:layout_marginTop="30dp"
+            android:layout_width="157dp"
+            android:layout_height="57dp"
+            android:background="@color/grey"
+            android:text="Publish"
+            android:textAllCaps="false"
+            android:textColor="@color/white"
+            android:textSize="20sp"
+            tools:layout_editor_absoluteX="63dp"
+            tools:layout_editor_absoluteY="364dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/enterHostel"/>
 
     </androidx.constraintlayout.widget.ConstraintLayout>
     </ScrollView>
