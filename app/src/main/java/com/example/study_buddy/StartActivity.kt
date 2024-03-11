@@ -16,11 +16,11 @@ class StartActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         enableEdgeToEdge()
         setContentView(binding.root)
-        binding.nextButton.setOnClickListener{
-            val intent =Intent(this,LoginActivity::class.java)
+        binding.nextbutton.setOnClickListener {
+            val intent = Intent(this,LoginActivity::class.java)
             startActivity(intent)
         }
-        ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.nextButton)) { v, insets ->
+        ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.page)) { v, insets ->
             val systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars())
             v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom)
             insets

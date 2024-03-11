@@ -18,7 +18,7 @@ import com.example.study_buddy.databinding.FragmentHomeBinding
 class HomeFragment : Fragment() {
 
     private lateinit var binding: FragmentHomeBinding
-    private val subjectCode = listOf("34567", "23BBS0189","behcfrfr")
+    private val subjectCode = listOf("123456", "23BBS0189","behcfrfr")
     private val time = listOf("9:00 to 5:00","9:00 to 5:00", "5:00 to 9:00")
     private lateinit var adapter: MenuAdapter
     override fun onCreate(savedInstanceState: Bundle?) {

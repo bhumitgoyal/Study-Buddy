@@ -6,7 +6,7 @@ import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
 import com.example.study_buddy.databinding.MenuItemBinding
 
-class MenuAdapter(private val menuItemsName: List<String>, private val menuItemTime:MutableList<String>): RecyclerView.Adapter<MenuAdapter.MenuViewHolder>() {
+class MenuAdapter(private val menuItems: List<String>, private val menuItemTime:MutableList<String>): RecyclerView.Adapter<MenuAdapter.MenuViewHolder>() {
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): MenuViewHolder {
         val binding = MenuItemBinding.inflate(LayoutInflater.from(parent.context),parent,false)
@@ -22,7 +22,7 @@ class MenuAdapter(private val menuItemsName: List<String>, private val menuItemT
     inner class MenuViewHolder(private val binding : MenuItemBinding) : RecyclerView.ViewHolder(binding.root) {
         fun bind(position: Int) {
             binding.apply {
-                SearchsubjectCode.text = menuItemsName[position]
+                SearchsubjectCode.text = menuItems[position]
                 SearchTimeBox.text = menuItemTime[position]
             }
         }
