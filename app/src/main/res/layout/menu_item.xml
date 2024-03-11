@@ -26,16 +26,39 @@
                 android:layout_height="wrap_content">
 
                 <TextView
+                    android:id="@+id/SearchroomNo"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="36dp"
+                    android:text="Q-1210"
+                    android:textColor="@color/white"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    tools:layout_editor_absoluteY="16dp" />
+
+                <TextView
+                    android:id="@+id/SearchroomBox"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="4dp"
+                    android:text="Room No:"
+                    android:textColor="@color/white"
+                    app:layout_constraintEnd_toStartOf="@+id/SearchroomNo"
+                    app:layout_constraintHorizontal_bias="0.952"
+
+                    app:layout_constraintStart_toEndOf="@+id/SearchsubjectCode"
+                    tools:layout_editor_absoluteY="16dp" />
+
+                <TextView
                     android:id="@+id/SearchsubjectCode"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_marginTop="10dp"
+                    android:layout_marginTop="16dp"
                     android:text="BMAT102L"
                     android:textColor="#FFFFFF"
                     android:textSize="20sp"
                     android:textStyle="bold"
                     app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintHorizontal_bias="0.536"
+                    app:layout_constraintHorizontal_bias="0.262"
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toTopOf="parent" />
 
