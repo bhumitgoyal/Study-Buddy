@@ -54,6 +54,7 @@
             android:inputType="text"
             android:paddingLeft="15dp"
             android:textSize="20sp"
+
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/textView2" />

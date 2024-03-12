@@ -10,7 +10,7 @@
         android:layout_width="330dp"
         android:layout_height="87dp"
         android:layout_marginTop="10dp"
-        app:cardBackgroundColor="@color/grey"
+        app:cardBackgroundColor="#3A69E1"
         app:cardCornerRadius="22dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -24,13 +24,13 @@
                 android:id="@+id/InfosubjectCode"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="16dp"
+                android:layout_marginStart="40dp"
+                android:layout_marginTop="12dp"
+                android:fontFamily="@font/lato_bold"
                 android:text="BMAT102L"
                 android:textColor="#FFFFFF"
                 android:textSize="20sp"
                 android:textStyle="bold"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintHorizontal_bias="0.069"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent" />
 
@@ -38,62 +38,76 @@
                 android:id="@+id/SearchtextView12"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:layout_marginEnd="10dp"
+                android:fontFamily="@font/lato_bold"
                 android:text="Time:"
                 android:textColor="@color/white"
-                app:layout_constraintEnd_toStartOf="@+id/InfoTimeBox"
-                app:layout_constraintHorizontal_bias="0.47"
-                app:layout_constraintStart_toStartOf="parent"
-                tools:layout_editor_absoluteY="52dp" />
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toStartOf="@+id/InfoTimeBox" />
 
             <TextView
                 android:id="@+id/inforoomBox"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:layout_marginTop="15dp"
+                android:layout_marginEnd="4dp"
+                android:fontFamily="@font/lato_bold"
                 android:text="Room No:"
                 android:textColor="@color/white"
                 app:layout_constraintEnd_toStartOf="@+id/InforoomNo"
                 app:layout_constraintHorizontal_bias="0.883"
                 app:layout_constraintStart_toEndOf="@+id/InfosubjectCode"
-                tools:layout_editor_absoluteY="16dp" />
+                app:layout_constraintTop_toTopOf="parent" />
 
             <TextView
                 android:id="@+id/InfoTimeBox"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:layout_marginTop="60dp"
+                android:fontFamily="@font/lato_bold"
                 android:text="9:00 AM - 10:00 AM"
                 android:textColor="@color/white"
-                tools:layout_editor_absoluteX="70dp"
-                tools:layout_editor_absoluteY="52dp" />
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
 
             <TextView
                 android:id="@+id/InforoomNo"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginEnd="20dp"
+                android:layout_marginTop="15dp"
+                android:layout_marginEnd="36dp"
+                android:fontFamily="@font/lato_bold"
                 android:text="Q-1210"
                 android:textColor="@color/white"
                 app:layout_constraintEnd_toEndOf="parent"
-                tools:layout_editor_absoluteY="16dp" />
+                app:layout_constraintTop_toTopOf="parent" />
 
             <ImageButton
                 android:id="@+id/infoOkButton"
                 android:layout_width="29dp"
                 android:layout_height="27dp"
-                android:layout_marginEnd="24dp"
+                android:layout_marginTop="40dp"
+                android:layout_marginEnd="10dp"
+                app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
-                app:srcCompat="@drawable/tick"
-                tools:layout_editor_absoluteY="44dp" />
+                app:layout_constraintTop_toTopOf="parent"
+                app:srcCompat="@drawable/tick" />
 
             <ImageButton
                 android:id="@+id/infoCrossButton"
                 android:layout_width="29dp"
                 android:layout_height="27dp"
                 android:layout_marginStart="30dp"
+                android:layout_marginTop="40dp"
+                android:layout_marginEnd="10dp"
                 android:background="@android:color/transparent"
+                app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toStartOf="@+id/infoOkButton"
                 app:layout_constraintStart_toEndOf="@+id/InfoTimeBox"
-                app:srcCompat="@drawable/arrowleft"
-                tools:layout_editor_absoluteY="44dp" />
+                app:layout_constraintTop_toTopOf="parent"
+                app:srcCompat="@drawable/arrowleft" />
 
         </androidx.constraintlayout.widget.ConstraintLayout>
     </androidx.cardview.widget.CardView>
@@ -104,6 +118,7 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="100dp"
         android:layout_marginTop="4dp"
+        android:fontFamily="@font/lato_bold"
         android:text="By: "
         app:layout_constraintEnd_toStartOf="@+id/InfoNameBox"
         app:layout_constraintHorizontal_bias="1.0"
@@ -116,6 +131,7 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="4dp"
         android:layout_marginEnd="112dp"
+        android:fontFamily="@font/lato_bold"
         android:text="Bhumit Goyal"
         app:layout_constraintEnd_toEndOf="@+id/cardView"
         app:layout_constraintTop_toBottomOf="@+id/cardView" />

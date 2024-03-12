@@ -9,13 +9,15 @@
 
     <!-- TODO: Update blank fragment layout -->
     <TextView
-        android:gravity="center"
-        android:textSize="24sp"
-        android:textColor="@color/black"
-        android:layout_marginTop="8dp"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:text="All Listings" />
+        android:layout_marginTop="8dp"
+        android:background="@drawable/whitebutton"
+        android:fontFamily="@font/lato_bold"
+        android:gravity="center"
+        android:text="All Listings"
+        android:textColor="@color/black"
+        android:textSize="24sp" />
 
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/MenuRecycler"

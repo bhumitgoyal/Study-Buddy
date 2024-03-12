@@ -31,6 +31,7 @@
             android:layout_height="wrap_content"
             android:layout_marginLeft="6dp"
             android:layout_weight="1"
+            android:fontFamily="@font/lato_bold"
             android:text="Name"
             android:textSize="18sp" />
 
@@ -41,6 +42,7 @@
             android:layout_weight="1"
             android:background="@android:color/transparent"
             android:ems="10"
+            android:fontFamily="@font/lato_bold"
             android:inputType="textMultiLine"
             android:text="lorem ipsum" />
     </LinearLayout>
@@ -63,6 +65,7 @@
             android:layout_height="wrap_content"
             android:layout_marginLeft="6dp"
             android:layout_weight="1"
+            android:fontFamily="@font/lato_bold"
             android:text="Email"
             android:textSize="18sp" />
 
@@ -75,6 +78,7 @@
             android:layout_weight="1"
             android:background="@android:color/transparent"
             android:ems="10"
+            android:fontFamily="@font/lato_bold"
             android:inputType="textMultiLine"
             android:text="Lorem ipsum is placeholder text
 commonly used in the graphic,
@@ -100,6 +104,7 @@ for previewing layouts and visual" />
             android:layout_height="wrap_content"
             android:layout_marginLeft="6dp"
             android:layout_weight="1"
+            android:fontFamily="@font/lato_bold"
             android:text="Address"
             android:textSize="18sp" />
 
@@ -110,6 +115,7 @@ for previewing layouts and visual" />
             android:layout_weight="1"
             android:background="@android:color/transparent"
             android:ems="10"
+            android:fontFamily="@font/lato_bold"
             android:inputType="textEmailAddress"
             android:text="lorem ipsum@gmail.com" />
     </LinearLayout>
@@ -133,6 +139,7 @@ for previewing layouts and visual" />
             android:layout_height="wrap_content"
             android:layout_marginLeft="6dp"
             android:layout_weight="1"
+            android:fontFamily="@font/lato_bold"
             android:text="Phone"
             android:textSize="18sp" />
 
@@ -143,23 +150,26 @@ for previewing layouts and visual" />
             android:layout_weight="1"
             android:background="@android:color/transparent"
             android:ems="10"
+            android:fontFamily="@font/lato_bold"
             android:inputType="phone"
             android:text="123456789" />
     </LinearLayout>
 
 
     </LinearLayout>
+
     <androidx.appcompat.widget.AppCompatButton
         android:id="@+id/button"
-        android:background="@drawable/profileedittextshape"
-        android:elevation="5dp"
-        android:layout_marginBottom="32dp"
-        android:textAllCaps="false"
-        android:layout_marginLeft="8dp"
-        android:layout_marginRight="8dp"
         android:layout_width="match_parent"
         android:layout_height="56dp"
         android:layout_gravity="bottom"
-        android:text="Save Information" />
+        android:layout_marginLeft="8dp"
+        android:layout_marginRight="8dp"
+        android:layout_marginBottom="32dp"
+        android:background="@drawable/profileedittextshape"
+        android:elevation="5dp"
+        android:fontFamily="@font/lato_bold"
+        android:text="Save Information"
+        android:textAllCaps="false" />
 
 </FrameLayout>
