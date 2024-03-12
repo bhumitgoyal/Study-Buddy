@@ -58,19 +58,6 @@
         app:layout_constraintStart_toStartOf="@+id/createAccountButton"
         app:layout_constraintTop_toBottomOf="@+id/createAccountButton" />
 
-    <TextView
-        android:id="@+id/textView3"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginBottom="8dp"
-        android:fontFamily="@font/lato_bold"
-        android:text="Designed by\nBhumit and Sarthak"
-        android:textAlignment="center"
-        android:textSize="16sp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent" />
-
     <androidx.appcompat.widget.AppCompatButton
         android:id="@+id/googlesignin"
         android:layout_width="152sp"
