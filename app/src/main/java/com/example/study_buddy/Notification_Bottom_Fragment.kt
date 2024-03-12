@@ -33,6 +33,8 @@ class Notification_Bottom_Fragment : BottomSheetDialogFragment() {
             ArrayList(notifications),
             ArrayList(notificationImages)
         )
+        binding.notificationRecyclerview.layoutManager = LinearLayoutManager(requireContext())
+        binding.notificationRecyclerview.adapter = adapter
         return binding.root
     }
 
