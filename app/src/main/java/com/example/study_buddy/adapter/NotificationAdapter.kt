@@ -5,7 +5,7 @@ import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
 import com.example.study_buddy.databinding.NotificationItemBinding
 
-class NotificationAdapter(private var notification : ArrayList<String>, private var notificationImage : ArrayList<Int>) :
+class NotificationAdapter(private var notification: ArrayList<String>, private var notificationImage: ArrayList<Int>) :
     RecyclerView.Adapter<NotificationAdapter.NotificationViewHolder>() {
 
 

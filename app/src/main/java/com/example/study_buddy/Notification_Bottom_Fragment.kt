@@ -27,6 +27,14 @@ class Notification_Bottom_Fragment : BottomSheetDialogFragment() {
     ): View? {
         // Inflate the layout for this fragment
         binding = FragmentNotificationBottomBinding.inflate(layoutInflater,container,false)
+        val notifications = listOf("Studying alone?","Your request has been accepted!","Your request has been denied!")
+        val notificationImages = listOf(R.drawable.sademoji,R.drawable.illustration,R.drawable.illustration)
+        val adapter = NotificationAdapter(
+            ArrayList(notifications),
+            ArrayList(notificationImages)
+        )
+        binding.notificationRecyclerview.layoutManager = LinearLayoutManager(requireContext())
+        binding.notificationRecyclerview.adapter = adapter
         return binding.root
 
 
@@ -34,14 +42,7 @@ class Notification_Bottom_Fragment : BottomSheetDialogFragment() {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
-        val notifications = listOf("Studying alone?", "Your request has been accepted!", "Your request has been denied!")
-        val notificationImages = listOf(R.drawable.sademoji,R.drawable.illustration)
-        val adapter = NotificationAdapter(
-            ArrayList(notifications),
-            ArrayList(notificationImages)
-        )
-        binding.notificationRecyclerview.layoutManager = LinearLayoutManager(requireContext())
-        binding.notificationRecyclerview.adapter = adapter
+
     }
 
     companion object {
