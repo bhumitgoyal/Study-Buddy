@@ -145,7 +145,7 @@
             android:layout_width="157dp"
             android:layout_height="57dp"
             android:layout_marginTop="30dp"
-            android:background="#3A69E1"
+            android:background="@drawable/greenbutton"
             android:text="Publish"
             android:textAllCaps="false"
             android:textColor="@color/white"
