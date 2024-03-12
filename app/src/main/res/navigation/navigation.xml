@@ -21,4 +21,9 @@
         android:name="com.example.study_buddy.Fragment.InfoFragment"
         android:label="fragment_info"
         tools:layout="@layout/fragment_info" />
+    <dialog
+        android:id="@+id/notification_Bottom_Fragment"
+        android:name="com.example.study_buddy.Notification_Bottom_Fragment"
+        android:label="fragment_notification__bottom_"
+        tools:layout="@layout/fragment_notification__bottom_" />
 </navigation>

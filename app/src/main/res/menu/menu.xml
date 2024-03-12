@@ -10,6 +10,9 @@
     <item android:title="Profile"
         android:id="@+id/profileFragment"
         android:icon="@drawable/user_02"/>
+    <item android:title="Profile"
+        android:id="@+id/notification_Bottom_Fragment"
+        android:icon="@drawable/user_02"/>
 
 
 </menu>
