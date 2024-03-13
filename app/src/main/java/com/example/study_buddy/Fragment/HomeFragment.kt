@@ -20,6 +20,11 @@ class HomeFragment : Fragment() {
     private lateinit var binding: FragmentHomeBinding
     private val subjectCode = listOf("123456", "23BBS0189","behcfrfr")
     private val time = listOf("9:00 to 5:00","9:00 to 5:00", "5:00 to 9:00")
+    private val room = listOf("9:00 to 5:00","9:00 to 5:00", "5:00 to 9:00")
+    private val chapter = listOf("9:00 to 5:00","9:00 to 5:00", "5:00 to 9:00")
+    private val phone =listOf("9:00 to 5:00","9:00 to 5:00", "5:00 to 9:00")
+    private val name = listOf("9:00 to 5:00","9:00 to 5:00", "5:00 to 9:00")
+
     private lateinit var adapter: MenuAdapter
     override fun onCreate(savedInstanceState: Bundle?) {
 
@@ -29,6 +34,10 @@ class HomeFragment : Fragment() {
 
     private val filterMenuCode = mutableListOf<String>()
     private val filterMenuTime = mutableListOf<String>()
+    private val filterMenuName = mutableListOf<String>()
+    private val filterMenuChapter = mutableListOf<String>()
+    private val filterMenuRoom = mutableListOf<String>()
+    private val filterMenuPhone = mutableListOf<String>()
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
@@ -40,7 +49,7 @@ class HomeFragment : Fragment() {
         // Inflate the layout for this fragment
         binding = FragmentHomeBinding.inflate(inflater,container,false)
 
-        adapter= MenuAdapter(filterMenuCode,filterMenuTime)
+        adapter= MenuAdapter(filterMenuCode,filterMenuTime,filterMenuRoom,filterMenuPhone,filterMenuName,filterMenuChapter,requireContext())
         binding.PopulafrecyclerView.layoutManager=LinearLayoutManager(requireContext())
         binding.PopulafrecyclerView.adapter=adapter
 
@@ -54,9 +63,17 @@ class HomeFragment : Fragment() {
     private fun showAllMenu() {
         filterMenuCode.clear()
         filterMenuTime.clear()
+        filterMenuName.clear()
+        filterMenuRoom.clear()
+        filterMenuPhone.clear()
+        filterMenuChapter.clear()
 
         filterMenuCode.addAll(subjectCode)
         filterMenuTime.addAll(time)
+        filterMenuChapter.addAll(chapter)
+        filterMenuName.addAll(name)
+        filterMenuPhone.addAll(phone)
+        filterMenuRoom.addAll(room)
 
         adapter.notifyDataSetChanged()
     }
@@ -87,11 +104,20 @@ class HomeFragment : Fragment() {
 
         filterMenuCode.clear()
         filterMenuTime.clear()
+        filterMenuName.clear()
+        filterMenuRoom.clear()
+        filterMenuPhone.clear()
+        filterMenuChapter.clear()
+
 
         subjectCode.forEachIndexed { index, SubjectCode ->
             if(SubjectCode.contains(query, ignoreCase = true)){
                 filterMenuCode.add(SubjectCode)
                 filterMenuTime.add(time[index])
+                filterMenuName.add(name[index])
+                filterMenuPhone.add(phone[index])
+                filterMenuChapter.add(chapter[index])
+                filterMenuRoom.add(room[index])
             }
         }
         adapter.notifyDataSetChanged()

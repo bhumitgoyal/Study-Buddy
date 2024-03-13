@@ -13,45 +13,25 @@
         android:theme="@style/Theme.StudyBuddy"
         tools:targetApi="31">
         <activity
+            android:name=".DetailsHomeActivity"
+            android:exported="false" />
+        <activity
             android:name=".AddItemActivity"
-            android:exported="true">
-
-
-
-        </activity>
+            android:exported="true"></activity>
         <activity
             android:name=".SigninActivity"
             android:exported="true" />
-
-
-
-
         <activity
             android:name=".LoginActivity"
-            android:exported="true">
-
-
-
-
-        </activity>
+            android:exported="true"></activity>
         <activity
             android:name=".StartActivity"
-            android:exported="true" >
-
-
-        </activity>
-
+            android:exported="true"></activity>
         <activity
             android:name=".SplashScreen"
-            android:exported="true" >
-
-
-
-
-
-
-
+            android:exported="true">
         </activity>
+
         <activity
             android:name=".MainActivity"
             android:exported="true">
@@ -60,9 +40,6 @@
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
-
-
-
 
         </activity>
     </application>

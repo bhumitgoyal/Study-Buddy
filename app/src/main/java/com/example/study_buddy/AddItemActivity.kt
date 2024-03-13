@@ -15,6 +15,7 @@ class AddItemActivity : AppCompatActivity() {
     private lateinit var timingsbox :String
     private lateinit var namebox :String
     private lateinit var roomnobox :String
+    private lateinit var phonenobox: String
 
     //firebase
     private lateinit var auth:FirebaseAuth
@@ -38,7 +39,8 @@ class AddItemActivity : AppCompatActivity() {
             timingsbox = binding.enterTime.text.toString().trim()
             chapterbox = binding.enterChapter.text.toString().trim()
             namebox = binding.enterName.text.toString().trim()
-            if(!(subjectCodebox.isBlank()||roomnobox.isBlank()||timingsbox.isBlank()||chapterbox.isBlank()||namebox.isBlank())){
+            phonenobox = binding.enterNumber.text.toString().trim()
+            if(!(phonenobox.isBlank()||subjectCodebox.isBlank()||roomnobox.isBlank()||timingsbox.isBlank()||chapterbox.isBlank()||namebox.isBlank())){
                 uploadData()
                 Toast.makeText(this, "Request added successfully", Toast.LENGTH_SHORT).show()
                 finish()
@@ -66,7 +68,8 @@ class AddItemActivity : AppCompatActivity() {
             chapterbox=chapterbox,
             timingsbox=timingsbox,
             namebox=namebox,
-            roomnobox=roomnobox
+            roomnobox=roomnobox,
+            phonenobox=phonenobox
         )
         newReqKey?.let {
             key ->

@@ -6,4 +6,5 @@ class AllMenu(
     val timingsbox :String? = null,
     val namebox :String? = null,
     val roomnobox :String? = null,
+    val phonenobox :String? = null,
 )
